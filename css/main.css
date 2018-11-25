@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* default for whole page */
 /* serif for the headings */
+@mixins border-box-stuff {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
 * {
   padding: 0;
   margin: 0;
@@ -10,8 +14,7 @@
 
 *:after,
 *:before {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+  @mixins border-box-stuff;
 }
 
 html {
@@ -21,7 +24,10 @@ html {
   font-weight: 400;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: 700;
   font-family: Cardo, ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 }
@@ -158,6 +164,11 @@ footer .row .col:first-child {
 
 footer {
   padding: 2rem 0;
+}
+@media all and (min-width: 701px) and (max-width: 900px) {
+  footer {
+    background-color: #89C0C9;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,11 @@
+@mixins border-box-stuff{
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+@mixin font-stack( $fam: Arial, $size: 1rem, $weight:600){
+    font:{
+        family: $fam;
+        size: $size;
+        weight: $weight;
+    }
+}
