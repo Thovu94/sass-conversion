@@ -70,24 +70,52 @@ header > nav {
         color: $dark-grey;
         border: 1px solid $light-grey;
     }
-    
+
 }
-header > nav a{
-    &:hover{
+
+header > nav a {
+    &:hover {
         color: $light-brown;
-        size: $size-nav;
-        font-weight: $font-weight;
+        font-size: $size-nav;
+        font-weight: $weight;
     }
 }
+
 .bg-focal {
     background-color: $light-brown;
     color: $dark-brown;
+
 }
 
+%focal {
+    padding: 2rem 2rem 1rem 2rem;
+    line-height: 1;
+}
+
+.focal {
+    p {
+        @extend %focal;
+    }
+
+    h2 {
+        @extend %focal;
+        font-size: $size-h2;
+    }
+}
+.content1{
+    padding: 2rem 0;
+}
 .bg-content1 {
     background-color: $white-color;
     color: $dark-grey;
     font-weight: 100;
+    h3{
+        font-size: $size-h2;
+        padding: 0.5rem 2rem 2rem 2rem;
+    }
+    p{
+        font-size: $size;
+    }
 }
 
 .bg-content2 {

@@ -66,7 +66,7 @@ ul {
 header > nav a {
   font-family: "Josefin Sans", ‘Trebuchet MS’, Helvetica, sans-serif;
   font-size: 1.414rem;
-  font-weight: 600;
+  font-weight: 500;
   background-color: #fff;
   text-decoration: none;
   text-align: center;
@@ -76,8 +76,8 @@ header > nav a {
 
 header > nav a:hover {
   color: #C9A689;
-  size: 2rem;
-  font-weight: 700;
+  font-size: 1.47rem;
+  font-weight: 500;
 }
 
 .bg-focal {
@@ -85,10 +85,30 @@ header > nav a:hover {
   color: #7C593C;
 }
 
+.focal h2, .focal p {
+  padding: 2rem 2rem 1rem 2rem;
+  line-height: 1;
+}
+
+.focal h2 {
+  font-size: 1.999rem;
+}
+
+.content1 {
+  padding: 2rem 0;
+}
+
 .bg-content1 {
   background-color: #fff;
   color: #222;
   font-weight: 100;
+}
+.bg-content1 h3 {
+  font-size: 1.999rem;
+  padding: 0.5rem 2rem 2rem 2rem;
+}
+.bg-content1 p {
+  font-size: 1.414rem;
 }
 
 .bg-content2 {
