@@ -60,6 +60,16 @@ ul {
     right: 0;
 }
 
+header h1 span {
+    font-size: $size-header;
+    float: right;
+    color: $dark-brown;
+    width: 80%;
+    padding-right: 0.5rem;
+    text-align: right;
+
+}
+
 header > nav {
 
     a {
@@ -102,18 +112,22 @@ header > nav a {
         font-size: $size-h2;
     }
 }
-.content1{
+
+.content1 {
     padding: 2rem 0;
 }
+
 .bg-content1 {
     background-color: $white-color;
     color: $dark-grey;
     font-weight: 100;
-    h3{
+
+    h3 {
         font-size: $size-h2;
         padding: 0.5rem 2rem 2rem 2rem;
     }
-    p{
+
+    p {
         font-size: $size;
     }
 }

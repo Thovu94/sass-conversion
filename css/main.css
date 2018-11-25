@@ -63,6 +63,15 @@ ul {
   right: 0;
 }
 
+header h1 span {
+  font-size: 3rem;
+  float: right;
+  color: #7C593C;
+  width: 80%;
+  padding-right: 0.5rem;
+  text-align: right;
+}
+
 header > nav a {
   font-family: "Josefin Sans", ‘Trebuchet MS’, Helvetica, sans-serif;
   font-size: 1.414rem;
