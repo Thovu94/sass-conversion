@@ -60,6 +60,17 @@ ul {
     right: 0;
 }
 
+header h1 i.fa-lg {
+    display: block;
+    font-size: 8rem;
+    float: left;
+    vertical-align: -30%;
+    line-height: $height;
+    width: 25%;
+    text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+}
+
 header h1 span {
     font-size: $size-header;
     float: right;
@@ -67,8 +78,8 @@ header h1 span {
     width: 80%;
     padding-right: 0.5rem;
     text-align: right;
-
 }
+
 
 header > nav {
 
