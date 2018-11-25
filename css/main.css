@@ -63,6 +63,23 @@ ul {
   right: 0;
 }
 
+header > nav a {
+  font-family: "Josefin Sans", ‘Trebuchet MS’, Helvetica, sans-serif;
+  font-size: 1.414rem;
+  font-weight: 600;
+  background-color: #fff;
+  text-decoration: none;
+  text-align: center;
+  color: #222;
+  border: 1px solid #d4d4d4;
+}
+
+header > nav a:hover {
+  color: #C9A689;
+  size: 2rem;
+  font-weight: 700;
+}
+
 .bg-focal {
   background-color: #C9A689;
   color: #7C593C;

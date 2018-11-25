@@ -2,10 +2,18 @@
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
-@mixin font-stack( $fam: Arial, $size: 1rem, $weight:600){
+@mixin font-stack( $fam: Arial, $size: 1.414rem, $weight:600){
     font:{
         family: $fam;
         size: $size;
         weight: $weight;
+    }
+}
+@mixin navi(){
+    font:{
+        family: $main-font-family;
+        size: $size;
+        weight: $weight;
+    
     }
 }

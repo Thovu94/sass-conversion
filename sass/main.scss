@@ -60,6 +60,25 @@ ul {
     right: 0;
 }
 
+header > nav {
+
+    a {
+        @include navi;
+        background-color: $white-color;
+        text-decoration: none;
+        text-align: center;
+        color: $dark-grey;
+        border: 1px solid $light-grey;
+    }
+    
+}
+header > nav a{
+    &:hover{
+        color: $light-brown;
+        size: $size-nav;
+        font-weight: $font-weight;
+    }
+}
 .bg-focal {
     background-color: $light-brown;
     color: $dark-brown;
