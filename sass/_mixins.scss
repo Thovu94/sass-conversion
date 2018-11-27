@@ -1,19 +1,67 @@
-@mixins border-box-stuff{
+@mixins border-box-stuff {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
-@mixin font-stack( $fam: Arial, $size: 1.414rem, $weight:600){
-    font:{
+
+@mixin font-stack($fam: Arial, $size: 1.414rem, $weight:600) {
+    font: {
         family: $fam;
         size: $size;
         weight: $weight;
     }
 }
-@mixin navi(){
-    font:{
+
+@mixin navi() {
+    font: {
         family: $main-font-family;
         size: $size;
         weight: $weight;
+
+    }
+}
+
+@mixin paraSection1 {
+    p {
+        font-size: $size;
+        padding: 1rem 2rem 0rem;
+    }
+}
+@mixin hover{
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    content: attr(data-country);
+    display: block;
+    padding: 0.2rem 1rem 0.2rem 2rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    height: 2rem;
+    width: auto;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.8);
+    background-image: url(../img/en-icon.png);
+    background-repeat: no-repeat;
+    background-size: 1.5rem auto;
+    background-position: left center;
+    }
     
+@mixin paraSection2 {
+    p {
+        font-size: $size;
+        padding: 1rem 2rem 0rem;
+    }
+
+    h4 {
+        font-size: $size-h2;
+        padding: 1rem 2rem 0rem;
+    }
+
+    ul {
+        li {
+            font-size: $size;
+            padding: 0.5rem 2rem;
+        }
     }
 }

@@ -180,9 +180,69 @@ section.focal {
 section.content1 {
   padding: 2rem 0;
 }
+section.content1 p {
+  font-size: 1.414rem;
+  padding: 1rem 2rem 0rem;
+}
 
 section.content2 {
   padding: 2rem 0;
+}
+section.content2 p {
+  font-size: 1.414rem;
+  padding: 1rem 2rem 0rem;
+}
+section.content2 h4 {
+  font-size: 1.999rem;
+  padding: 1rem 2rem 0rem;
+}
+section.content2 ul li {
+  font-size: 1.414rem;
+  padding: 0.5rem 2rem;
+}
+
+.content2 span:hover:after {
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+  content: attr(data-country);
+  display: block;
+  padding: 0.2rem 1rem 0.2rem 2rem;
+  font-size: 1rem;
+  line-height: 2rem;
+  height: 2rem;
+  width: auto;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url(../img/en-icon.png);
+  background-repeat: no-repeat;
+  background-size: 1.5rem auto;
+  background-position: left center;
+}
+
+.content2 span[lang] {
+  position: relative;
+}
+
+.content2 h4 span[lang=es]:after {
+  background-image: url(../img/es-icon.png);
+}
+.content2 h4 span[lang=hi]:after {
+  background-image: url(../img/hi-icon.png);
+}
+.content2 h4 span[lang=fr]:after {
+  background-image: url(../img/fr-icon.png);
+}
+.content2 h4 span[lang=sv]:after {
+  background-image: url(../img/sv-icon.png);
+}
+.content2 h4 span[lang=no]:after {
+  background-image: url(../img/no-icon.png);
+}
+.content2 h4 span[lang=pt]:after {
+  background-image: url(../img/pt-icon.png);
 }
 
 .row {

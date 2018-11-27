@@ -33,6 +33,7 @@ ul {
     list-style: none;
 }
 
+//
 .bg-header {
     background-color: $white-color;
     background-color: $light-blue;
@@ -68,7 +69,7 @@ header h1 i.fa-lg {
     line-height: $height;
     width: 25%;
     text-rendering: auto;
--webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
 }
 
 header h1 span {
@@ -191,10 +192,46 @@ section.focal {
 
 section.content1 {
     padding: 2rem 0;
+    @include paraSection1;
 }
 
 section.content2 {
     padding: 2rem 0;
+    @include paraSection2;
+
+}
+
+.content2 span:hover:after {
+    @include hover;
+}
+
+.content2 span[lang]{
+    position: relative;
+}
+.content2 h4 span {
+    &[lang="es"]:after {
+        background-image: url(../img/es-icon.png);
+    }
+
+    &[lang="hi"]:after {
+        background-image: url(../img/hi-icon.png);
+    }
+
+    &[lang="fr"]:after {
+        background-image: url(../img/fr-icon.png);
+    }
+
+    &[lang="sv"]:after {
+        background-image: url(../img/sv-icon.png);
+    }
+
+    &[lang="no"]:after {
+        background-image: url(../img/no-icon.png);
+    }
+
+    &[lang="pt"]:after {
+        background-image: url(../img/pt-icon.png);
+    }
 }
 
 .row {
@@ -241,8 +278,3 @@ footer {
 }
 
 //Media queries//
-@media all and (min-width:$break-small701) and (max-width:$break-small900) {}
-
-@media all and (min-width:901px) and (max-width: 1400px) {}
-
-@media all and (min-width:1401px) {}
