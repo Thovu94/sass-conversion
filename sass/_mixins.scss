@@ -26,7 +26,8 @@
         padding: 1rem 2rem 0rem;
     }
 }
-@mixin hover{
+
+@mixin hover {
     position: absolute;
     top: -0.5rem;
     left: 0;
@@ -40,16 +41,18 @@
     word-break: keep-all;
     overflow-wrap: normal;
     overflow: hidden;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     background-image: url(../img/en-icon.png);
     background-repeat: no-repeat;
     background-size: 1.5rem auto;
     background-position: left center;
-    }
-@mixin li{
+}
+
+@mixin li {
     font-size: $size;
-     padding: 0.5rem 2rem;
-}  
+    padding: 0.5rem 2rem;
+}
+
 @mixin paraSection2 {
     p {
         font-size: $size;
@@ -67,8 +70,38 @@
         }
     }
 }
-@mixin footer-h4($sizeh4,$colorh4){
+
+@mixin footer-h4($sizeh4, $colorh4) {
     padding: 0.5rem 2rem;
     font-size: $sizeh4;
     color: $colorh4;
+}
+
+@mixin header700 {
+    width: $width600;
+    margin: $margin;
+    @content;
+}
+
+@mixin headerh1ifalg($color1, $display, $float, $fontsize, $line-height) {
+    color: $color1;
+    display: $display;
+    float: $float;
+    font-size: $fontsize;
+    line-height: $line-height;
+    @content;
+}
+
+@mixin headernav($flexdirection, $justifycontent, $align-items) {
+    flex-direction: $flexdirection;
+    justify-content: $justifycontent;
+    align-items: $align-items;
+    @content;
+}
+@mixin headernava($font-size-nav, $line-height-nav, $border-nav, $padding-nav,$background-color-nav){
+    font-size: $font-size-nav;
+    line-height: $line-height-nav;
+    border: $border-nav;
+    padding: $padding-nav;
+    background-color: $background-color-nav;
 }
