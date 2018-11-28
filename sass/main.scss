@@ -99,14 +99,6 @@ header h1 span {
 
 
 header > nav {
-    a {
-        @include navi;
-        background-color: $white-color;
-        text-decoration: none;
-        text-align: center;
-        color: $dark-grey;
-        border: 1px solid $light-grey;
-    }
 
     flex-direction: column;
     justify-content: flex-start;
@@ -115,10 +107,6 @@ header > nav {
     display: flex;
     padding: 2rem 0;
 
-
-}
-
-header nav {
     @media all and (min-width: 701px) and (max-width: 900px) {
         flex-direction: row;
         justify-content: space-around;
@@ -127,17 +115,66 @@ header nav {
     }
 
 
-
-
 }
 
+
 header > nav a {
+    & {
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-shrink: 0;
+        text-align: center;
+    }
+
     &:hover {
         color: $light-brown;
         font-size: $size-nav;
         font-weight: $weight;
     }
 
+    & {
+        @include navi;
+        background-color: $white-color;
+        text-decoration: none;
+        text-align: center;
+        color: $dark-grey;
+        border: 1px solid $light-grey;
+    }
+
+    & {
+        @media all and (min-width: 701px) and (max-width: 900px) {
+            flex-basis: 20%;
+            font-size: 1rem;
+            line-height: 2rem;
+            min-height: 6rem;
+            border: none;
+            border-left: 1px solid #d4d4d4;
+            padding: 1.0rem;
+            background-color: #fff;
+
+        }
+    }
+
+}
+
+header > nav a {
+    & {
+        text-align: center;
+        text-decoration: none;
+        color: #222;
+        font-size: 1.414rem;
+        letter-spacing: 0.25rem;
+        border: 1px solid #d4d4d4;
+        border-bottom: none;
+        padding: 1.0rem 2rem;
+        line-height: 1;
+        background-color: #fff;
+    }
+
+    &:hover {
+        font-weight: 700;
+        color: #7C593C;
+    }
 }
 
 .bg-focal {

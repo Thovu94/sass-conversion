@@ -109,6 +109,25 @@ header > nav {
   display: flex;
   padding: 2rem 0;
 }
+@media all and (min-width: 701px) and (max-width: 900px) {
+  header > nav {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+header > nav a {
+  flex-basis: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  text-align: center;
+}
+header > nav a:hover {
+  color: #C9A689;
+  font-size: 1.47rem;
+  font-weight: 500;
+}
 header > nav a {
   font-family: "Josefin Sans", ‘Trebuchet MS’, Helvetica, sans-serif;
   font-size: 1.414rem;
@@ -119,19 +138,34 @@ header > nav a {
   color: #222;
   border: 1px solid #d4d4d4;
 }
-
 @media all and (min-width: 701px) and (max-width: 900px) {
-  header nav {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  header > nav a {
+    flex-basis: 20%;
+    font-size: 1rem;
+    line-height: 2rem;
+    min-height: 6rem;
+    border: none;
+    border-left: 1px solid #d4d4d4;
+    padding: 1rem;
+    background-color: #fff;
   }
 }
 
+header > nav a {
+  text-align: center;
+  text-decoration: none;
+  color: #222;
+  font-size: 1.414rem;
+  letter-spacing: 0.25rem;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  padding: 1rem 2rem;
+  line-height: 1;
+  background-color: #fff;
+}
 header > nav a:hover {
-  color: #C9A689;
-  font-size: 1.47rem;
-  font-weight: 500;
+  font-weight: 700;
+  color: #7C593C;
 }
 
 .bg-focal {
