@@ -46,7 +46,10 @@
     background-size: 1.5rem auto;
     background-position: left center;
     }
-    
+@mixin li{
+    font-size: $size;
+     padding: 0.5rem 2rem;
+}  
 @mixin paraSection2 {
     p {
         font-size: $size;
@@ -60,8 +63,12 @@
 
     ul {
         li {
-            font-size: $size;
-            padding: 0.5rem 2rem;
+            @include li;
         }
     }
+}
+@mixin footer-h4($sizeh4,$colorh4){
+    padding: 0.5rem 2rem;
+    font-size: $sizeh4;
+    color: $colorh4;
 }

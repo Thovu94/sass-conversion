@@ -256,12 +256,31 @@ section.content2 ul li {
   flex-basis: 100%;
   /* mobile default */
 }
+.row .colh4 {
+  font-size: 1.414rem;
+  padding: 0.5rem 2rem;
+}
+.row .colp {
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  color: #7C593C;
+}
 
 footer .row {
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
+}
+footer .row h4 {
+  padding: 0.5rem 2rem;
+  font-size: 1.414rem;
+  color: #3a5E63;
+}
+footer .row p {
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  color: #222;
 }
 
 footer .row > * {
@@ -281,6 +300,11 @@ footer .row .col:first-child {
 
 footer {
   padding: 2rem 0;
+}
+footerp {
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  color: #222;
 }
 @media all and (min-width: 701px) and (max-width: 900px) {
   footer {

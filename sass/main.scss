@@ -244,6 +244,12 @@ section.content2 {
 .row .col {
     flex-basis: 100%;
     /* mobile default */
+    &h4{
+        @include li;
+    }
+    &p{
+        @include footer-h4(1rem, $dark-brown);
+    }
 }
 
 footer .row {
@@ -251,6 +257,8 @@ footer .row {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+    & h4{@include footer-h4($size, $dark-blue);}
+    & p{@include footer-h4($size-default, $dark-grey);}
 }
 
 footer .row > * {
@@ -258,6 +266,7 @@ footer .row > * {
     padding-bottom: 2rem;
     border-left: 1px solid $dark-blue;
     margin-bottom: 2rem;
+    
 }
 
 footer .row.last-row > * {
@@ -270,7 +279,9 @@ footer .row .col:first-child {
 
 footer {
     padding: 2rem 0;
-
+    &p {@include footer-h4($size-default, $dark-grey);
+        
+    }
     @media all and (min-width: $break-small701) and (max-width:$break-small900) {
         background-color: $med-blue;
 
