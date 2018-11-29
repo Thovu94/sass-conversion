@@ -86,7 +86,7 @@ header h1 i.fa-lg {
     width: 100%;
     color: #7C593C;
     vertical-align: baseline;
-    color: #7C593C;
+    color: #3a5E63;
     display: inline;
     float: none;
     font-size: 4rem;
@@ -578,6 +578,11 @@ footer .row p {
 @media all and (min-width: 701px) and (max-width: 900px) {
   footer .row .fa-circle {
     color: #89C0C9;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  footer .row .fa-circle {
+    color: #C9A689;
   }
 }
 @media all and (min-width: 701px) and (max-width: 900px) {
