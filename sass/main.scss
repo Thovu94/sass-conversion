@@ -68,20 +68,26 @@ ul {
     right: 0;
 }
 
-header h1 {}
+header h1 {
+    color: $dark-brown;
+    letter-spacing: 0.1rem;
+
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+        width: 100%;
+        color: $dark-brown;
+    }
+
+}
 
 header h1 i.fa-lg {
-    @include headerh1ifalg($light-brown, block, left, 8rem, $height);
-    vertical-align: -30%;
+    @include headerh1ifalg($light-brown, block, left, 7rem, $height);
     width: 25%;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
 
     @media all and (min-width: $break-small701) and (max-width: $break-small900) {
         width: 100%;
         color: $dark-brown;
         vertical-align: baseline;
-        @include headerh1ifalg($dark-brown, inline, none, 4rem, 6.3968rem)
+        @include headerh1ifalg($dark-brown, inline, none, 4rem, 6.3968rem);
     }
 
     @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
@@ -91,6 +97,12 @@ header h1 i.fa-lg {
     }
 
     ~ span {
+        float: right;
+        width: 75%;
+        font-size: 3.998rem;
+        padding-left: 1rem;
+        text-align: right;
+
         @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
             float: none;
             letter-spacing: 0.25rem;
@@ -103,7 +115,7 @@ header h1 i.fa-lg {
 header h1 span {
     font-size: $size-header;
     float: right;
-    color: $dark-blue;
+    color: $dark-brown;
     width: 100%;
     padding-right: 0.5rem;
     text-align: right;
@@ -423,7 +435,8 @@ section.content2 {
     }
 
     & h4 {
-        font-size: $size;
+        font-size: $size-h2;
+        padding: 1rem 2rem 0rem;
 
         @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
             font-size: $size;
