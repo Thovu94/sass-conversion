@@ -86,7 +86,7 @@ header h1 i.fa-lg {
     width: 100%;
     color: #7C593C;
     vertical-align: baseline;
-    color: #3a5E63;
+    color: #7C593C;
     display: inline;
     float: none;
     font-size: 4rem;
@@ -131,6 +131,11 @@ header h1 span {
   header h1 span {
     float: none;
     text-align: left;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  header h1 span {
+    color: #3a5E63;
   }
 }
 

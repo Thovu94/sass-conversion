@@ -87,7 +87,7 @@ header h1 i.fa-lg {
         width: 100%;
         color: $dark-brown;
         vertical-align: baseline;
-        @include headerh1ifalg($dark-blue, inline, none, 4rem, 6.3968rem);
+        @include headerh1ifalg($dark-brown, inline, none, 4rem, 6.3968rem);
     }
 
     @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
@@ -123,6 +123,10 @@ header h1 span {
     @media all and (min-width: $break-small701) and (max-width: $break-small900) {
         float: none;
         text-align: left;
+        
+    }
+    @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
+        color: $dark-blue;
     }
 
 
