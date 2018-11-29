@@ -97,7 +97,7 @@ header h1 i.fa-lg {
     }
 
     ~ span {
-        float: right;
+        float: none;
         width: 75%;
         font-size: 3.998rem;
         padding-left: 1rem;
@@ -662,6 +662,9 @@ footer {
         @media all and (min-width: $break-small701) and (max-width: $break-small900) {
             display: none;
         }
+        @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
+            display: none;
+        }
     }
 
     h4[lang=ar] {
@@ -670,6 +673,7 @@ footer {
         @media all and (min-width: $break-small701) and (max-width: $break-small900) {
             display: block;
         }
+        
     }
 
     h4[lang=ru] {
@@ -677,6 +681,9 @@ footer {
 
         @media all and (min-width: $break-small701) and (max-width: $break-small900) {
             display: none;
+        }
+        @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
+            display: block;
         }
     }
 }
