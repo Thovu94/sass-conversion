@@ -105,3 +105,8 @@
     padding: $padding-nav;
     background-color: $background-color-nav;
 }
+@mixin focalh2{
+    font-size: 1.999rem;
+    line-height: 1.2;
+    padding: 2rem 2rem 1rem 2rem;
+}

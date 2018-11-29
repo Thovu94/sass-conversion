@@ -102,11 +102,12 @@ header h1 span {
 }
 
 header > nav {
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
   width: 100%;
   display: flex;
+  flex-direction: column;
+  /* mobile first */
+  justify-content: flex-start;
+  align-items: stretch;
   padding: 2rem 0;
 }
 @media all and (min-width: 701px) and (max-width: 900px) {
@@ -148,21 +149,10 @@ header > nav a {
     border-left: 1px solid #d4d4d4;
     padding: 1rem;
     background-color: #fff;
+    flex-direction: row;
   }
 }
 
-header > nav a {
-  text-align: center;
-  text-decoration: none;
-  color: #222;
-  font-size: 1.414rem;
-  letter-spacing: 0.25rem;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  padding: 1rem 2rem;
-  line-height: 1;
-  background-color: #fff;
-}
 header > nav a:hover {
   font-weight: 700;
   color: #7C593C;
@@ -173,17 +163,22 @@ header > nav a:hover {
   color: #7C593C;
 }
 
-.focal h2, .focal p {
-  padding: 2rem 2rem 1rem 2rem;
-  line-height: 1;
-}
-
 .focal h2 {
   font-size: 1.999rem;
+  line-height: 1.2;
+  padding: 2rem 2rem 1rem 2rem;
+}
+.focal p {
+  padding: 0.2rem 2rem 2rem;
+  font-size: 1rem;
 }
 
 .content1 {
   padding: 2rem 0;
+}
+.content1h3 {
+  font-size: 1.999rem;
+  padding: 0.2rem 2rem 2rem;
 }
 
 .bg-content1 {
@@ -256,6 +251,12 @@ section.focal {
   /* default */
   margin: 0 auto;
 }
+@media all and (min-width: 701px) and (max-width: 900px) {
+  section.focal {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
 
 section.content1 {
   padding: 2rem 0;
@@ -263,6 +264,12 @@ section.content1 {
 section.content1 p {
   font-size: 1.414rem;
   padding: 1rem 2rem 0rem;
+}
+@media all and (min-width: 701px) and (max-width: 900px) {
+  section.content1 {
+    width: 700px;
+    margin: 0 auto;
+  }
 }
 
 section.content2 {
@@ -279,6 +286,19 @@ section.content2 h4 {
 section.content2 ul li {
   font-size: 1.414rem;
   padding: 0.5rem 2rem;
+}
+@media all and (min-width: 701px) and (max-width: 900px) {
+  section.content2 {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+section.content2 h4 {
+  font-size: 1.414rem;
+}
+section.content2 p {
+  font-size: 1.414rem;
+  padding: 0.5rem 2rem 1rem;
 }
 
 .content2 span:hover:after {
@@ -332,6 +352,18 @@ section.content2 ul li {
   align-items: stretch;
 }
 
+.content2 .row {
+  display: flex;
+}
+@media all and (min-width: 701px) and (max-width: 900px) {
+  .content2 .row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
 .row .col {
   flex-basis: 100%;
   /* mobile default */
@@ -352,15 +384,27 @@ footer .row {
   justify-content: space-around;
   align-items: flex-start;
 }
+
 footer .row h4 {
   padding: 0.5rem 2rem;
   font-size: 1.414rem;
-  color: #3a5E63;
+  color: #7C593C;
 }
 footer .row p {
   padding: 0.5rem 2rem;
   font-size: 1rem;
   color: #222;
+}
+@media all and (min-width: 701px) and (max-width: 900px) {
+  footer .row .fa-circle {
+    color: #89C0C9;
+  }
+}
+@media all and (min-width: 701px) and (max-width: 900px) {
+  footer .row:first-child .col:last-child {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
 }
 
 footer .row > * {
@@ -388,7 +432,23 @@ footerp {
 }
 @media all and (min-width: 701px) and (max-width: 900px) {
   footer {
-    background-color: #89C0C9;
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 701px) and (max-width: 900px) {
+  footer h4[lang=en] {
+    display: none;
+  }
+}
+@media all and (min-width: 701px) and (max-width: 900px) {
+  footer h4[lang=de] {
+    display: none;
+  }
+}
+@media all and (min-width: 701px) and (max-width: 900px) {
+  footer h4[lang=ru] {
+    display: none;
   }
 }
 

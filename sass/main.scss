@@ -45,7 +45,7 @@ ul {
 .bg-header {
     @extend %bg-header700;
 
-    @media all and (min-width: 701px) and (max-width: 900px) {
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
         @extend %bg-header700;
     }
 }
@@ -75,9 +75,9 @@ header h1 i.fa-lg {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
 
-    @media all and (min-width: 701px) and (max-width: 900px) {
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
         width: 100%;
-        color: #7C593C;
+        color: $dark-brown;
         vertical-align: baseline;
         @include headerh1ifalg($dark-brown, inline, none, 4rem, 6.3968rem)
     }
@@ -91,7 +91,7 @@ header h1 span {
     padding-right: 0.5rem;
     text-align: right;
 
-    @media all and (min-width: 701px) and (max-width: 900px) {
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
         float: none;
         text-align: left;
     }
@@ -100,21 +100,21 @@ header h1 span {
 
 header > nav {
 
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    width: 100%;
-    display: flex;
-    padding: 2rem 0;
+    & {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* mobile first */
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 2rem 0;
+    }
 
-    @media all and (min-width: 701px) and (max-width: 900px) {
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-
     }
-
-
 }
 
 
@@ -148,32 +148,20 @@ header > nav a {
             line-height: 2rem;
             min-height: 6rem;
             border: none;
-            border-left: 1px solid #d4d4d4;
+            border-left: 1px solid $light-grey;
             padding: 1.0rem;
-            background-color: #fff;
-
+            background-color: $white-color;
+            flex-direction: row;
         }
     }
 
 }
 
 header > nav a {
-    & {
-        text-align: center;
-        text-decoration: none;
-        color: #222;
-        font-size: 1.414rem;
-        letter-spacing: 0.25rem;
-        border: 1px solid #d4d4d4;
-        border-bottom: none;
-        padding: 1.0rem 2rem;
-        line-height: 1;
-        background-color: #fff;
-    }
 
     &:hover {
         font-weight: 700;
-        color: #7C593C;
+        color: $dark-brown;
     }
 }
 
@@ -183,24 +171,29 @@ header > nav a {
 
 }
 
-%focal {
-    padding: 2rem 2rem 1rem 2rem;
-    line-height: 1;
-}
+
 
 .focal {
-    p {
-        @extend %focal;
+    & h2 {
+        font-size: 1.999rem;
+        line-height: 1.2;
+        padding: 2rem 2rem 1rem 2rem;
     }
 
-    h2 {
-        @extend %focal;
-        font-size: $size-h2;
+    & p {
+        padding: 0.2rem 2rem 2rem;
+        font-size: $size-default;
     }
+
 }
 
 .content1 {
     padding: 2rem 0;
+
+    &h3 {
+        font-size: $size-h2;
+        padding: 0.2rem 2rem 2rem;
+    }
 }
 
 .bg-content1 {
@@ -216,12 +209,15 @@ header > nav a {
     p {
         font-size: $size;
     }
+
 }
 
 .bg-content2 {
     background-color: $light-blue;
     color: $dark-blue;
     font-weight: 100;
+
+
 }
 
 .bg-footer {
@@ -235,9 +231,8 @@ header {
     margin: 0 auto;
     position: relative;
 
-    @media all and (min-width: 701px) and (max-width: 900px) {
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
         @include header700;
-        ;
     }
 }
 
@@ -245,7 +240,7 @@ header h1 {
     width: 100%;
     padding: 0 2rem;
 
-    @media all and (min-width: 701px) and (max-width: 900px) {
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
         width: 100%;
         color: $dark-brown;
     }
@@ -272,17 +267,40 @@ section.focal {
     width: 400px;
     /* default */
     margin: 0 auto;
+
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+        width: 700px;
+        margin: 0 auto;
+    }
 }
 
 section.content1 {
     padding: 2rem 0;
     @include paraSection1;
+
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+        width: 700px;
+        margin: 0 auto;
+    }
 }
 
 section.content2 {
     padding: 2rem 0;
     @include paraSection2;
 
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    & h4 {
+        font-size: $size;
+    }
+
+    & p {
+        font-size: $size;
+        padding: 0.5rem 2rem 1rem;
+    }
 }
 
 .content2 span:hover:after {
@@ -326,6 +344,17 @@ section.content2 {
     align-items: stretch;
 }
 
+.content2 .row {
+    display: flex;
+
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
 .row .col {
     flex-basis: 100%;
 
@@ -336,21 +365,48 @@ section.content2 {
 
     &p {
         @include footer-h4(1rem, $dark-brown);
+
     }
+
 }
 
-footer .row {
+%footer-row {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+}
+
+footer .row {
+    @extend %footer-row;
+
+    & {
+        @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+            @extend %footer-row;
+        }
+    }
 
     & h4 {
-        @include footer-h4($size, $dark-blue);
+        @include footer-h4($size, $dark-brown);
     }
 
     & p {
         @include footer-h4($size-default, $dark-grey);
+    }
+
+    & .fa-circle {
+        @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+            color: $med-blue;
+        }
+    }
+
+    &:first-child {
+        & .col:last-child {
+            @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+                unicode-bidi: bidi-override;
+                direction: rtl;
+            }
+        }
     }
 }
 
@@ -378,9 +434,27 @@ footer {
 
     }
 
-    @media all and (min-width: $break-small701) and (max-width:$break-small900) {
-        background-color: $med-blue;
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+        width: 700px;
+        margin: 0 auto;
+    }
 
+    h4[lang=en] {
+        @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+            display: none;
+        }
+    }
+
+    h4[lang=de] {
+        @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+            display: none;
+        }
+    }
+
+    h4[lang=ru] {
+        @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+            display: none;
+        }
     }
 }
 
