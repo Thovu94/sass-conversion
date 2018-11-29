@@ -163,6 +163,11 @@ header > nav a {
     flex-direction: row;
   }
 }
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  header > nav a:first-child {
+    border-left: none;
+  }
+}
 
 header > nav a:hover {
   font-weight: 700;
@@ -190,6 +195,20 @@ header > nav a:hover {
 .content1h3 {
   font-size: 1.999rem;
   padding: 0.2rem 2rem 2rem;
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  .content1 .row {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  .content1 .row .col {
+    flex-basis: 33%;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
 }
 
 .bg-content1 {
@@ -276,6 +295,20 @@ header nav > a {
   flex-shrink: 0;
   text-align: center;
 }
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  header nav > a {
+    flex-basis: 20%;
+    font-size: 1rem;
+    line-height: 2rem;
+    min-height: 2rem;
+    border: none;
+    border-left: 1px solid #d4d4d4;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    background-color: #fff;
+    padding: 0.5rem 0.5rem;
+  }
+}
 
 section.focal {
   width: 400px;
@@ -285,6 +318,24 @@ section.focal {
 @media all and (min-width: 701px) and (max-width: 900px) {
   section.focal {
     width: 700px;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  section.focal {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  section.focal h2 {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  section.focal p.author {
+    width: 600px;
     margin: 0 auto;
   }
 }
@@ -300,6 +351,25 @@ section.content1 p {
   section.content1 {
     width: 700px;
     margin: 0 auto;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  section.content1 {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  section.content1 h3 {
+    flex-basis: 33%;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  section.content1 h3 .fa-2x {
+    font-size: 1.999rem;
+    padding-right: 1rem;
   }
 }
 
@@ -327,9 +397,25 @@ section.content2 ul li {
 section.content2 h4 {
   font-size: 1.414rem;
 }
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  section.content2 h4 {
+    font-size: 1.414rem;
+  }
+}
 section.content2 p {
   font-size: 1.414rem;
   padding: 0.5rem 2rem 1rem;
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  section.content2 p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  section.content2 li {
+    font-size: 1.414rem;
+  }
 }
 
 .content2 span:hover:after {
@@ -394,6 +480,20 @@ section.content2 p {
     align-items: flex-start;
   }
 }
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  .content2 .row {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  .content2 .row .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}
 
 .row .col {
   flex-basis: 100%;
@@ -444,6 +544,28 @@ footer .row p {
     direction: rtl;
   }
 }
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  footer .row {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  footer .row .col {
+    flex-basis: 50%;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  footer .row.last-row .col {
+    flex-basis: 100%;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  footer .row.last-row {
+    justify-content: flex-start;
+  }
+}
 
 footer .row > * {
   flex-basis: 50%;
@@ -471,6 +593,12 @@ footerp {
 @media all and (min-width: 701px) and (max-width: 900px) {
   footer {
     width: 700px;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  footer {
+    width: 900px;
     margin: 0 auto;
   }
 }
