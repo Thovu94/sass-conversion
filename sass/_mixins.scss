@@ -78,8 +78,9 @@
 }
 
 @mixin header700 {
-    width: $width600;
-    margin: $margin;
+    width: 700px;
+    margin: 0 auto;
+    min-height: 8rem;
     @content;
 }
 
@@ -106,7 +107,7 @@
     background-color: $background-color-nav;
 }
 @mixin focalh2{
-    font-size: 1.999rem;
+    font-size: $size-h2;
     line-height: 1.2;
     padding: 2rem 2rem 1rem 2rem;
 }

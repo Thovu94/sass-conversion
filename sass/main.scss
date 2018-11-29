@@ -220,6 +220,7 @@ header > nav a {
     .row {
         @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
             flex-direction: row;
+            flex-wrap: wrap;
             justify-content: space-around;
             align-items: flex-start;
         }
@@ -307,6 +308,7 @@ header nav {
     @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
 
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
     }
@@ -318,6 +320,22 @@ header nav > a {
     flex-shrink: 0;
     text-align: center;
 
+    &:last-child {
+        @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+            border-right: 1px solid #d4d4d4;
+        }
+    }
+
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+        flex-basis: 20%;
+        font-size: 1rem;
+        line-height: 2rem;
+        min-height: 6rem;
+        border: none;
+        border-left: 1px solid #d4d4d4;
+        padding: 1.0rem;
+        background-color: #fff;
+    }
 
     @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
         flex-basis: 20%;
@@ -483,11 +501,16 @@ section.content2 {
 
     @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-around;
         align-items: flex-start;
     }
 
     & .col {
+        @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+            flex-basis: 50%;
+        }
+
         @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
             flex-basis: 25%;
             flex-grow: 1;
@@ -546,6 +569,7 @@ footer .row {
 
     @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-around;
         align-items: flex-start;
     }
