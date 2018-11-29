@@ -68,6 +68,8 @@ ul {
     right: 0;
 }
 
+header h1 {}
+
 header h1 i.fa-lg {
     @include headerh1ifalg($light-brown, block, left, 8rem, $height);
     vertical-align: -30%;
@@ -81,13 +83,28 @@ header h1 i.fa-lg {
         vertical-align: baseline;
         @include headerh1ifalg($dark-brown, inline, none, 4rem, 6.3968rem)
     }
+
+    @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
+        @include headerh1ifalg($dark-blue, inline, none, 4rem, 6.3968rem);
+        vertical-align: baseline;
+
+    }
+
+    ~ span {
+        @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
+            float: none;
+            letter-spacing: 0.25rem;
+            font-size: 3.998rem;
+            text-align: left;
+        }
+    }
 }
 
 header h1 span {
     font-size: $size-header;
     float: right;
-    color: $dark-brown;
-    width: 80%;
+    color: $dark-blue;
+    width: 100%;
     padding-right: 0.5rem;
     text-align: right;
 
@@ -95,6 +112,8 @@ header h1 span {
         float: none;
         text-align: left;
     }
+
+
 }
 
 
@@ -110,12 +129,8 @@ header > nav {
         padding: 2rem 0;
     }
 
-    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
 }
+
 
 
 header > nav a {
@@ -234,15 +249,20 @@ header {
     @media all and (min-width: $break-small701) and (max-width: $break-small900) {
         @include header700;
     }
+
+    @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
+        width: 900px;
+        margin: 0 auto;
+    }
 }
 
 header h1 {
     width: 100%;
     padding: 0 2rem;
 
-    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+    @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
         width: 100%;
-        color: $dark-brown;
+        color: $dark-blue;
     }
 }
 
@@ -254,6 +274,19 @@ header nav {
     justify-content: flex-start;
     align-items: stretch;
     padding: 2rem 0;
+
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    @media all and (min-width: $break-med901) and (max-width: $break-med1400) {
+
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
 
 header nav > a {
@@ -370,21 +403,15 @@ section.content2 {
 
 }
 
-%footer-row {
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-}
+
 
 footer .row {
-    @extend %footer-row;
+    @include footer-row;
 
-    & {
-        @media all and (min-width: $break-small701) and (max-width: $break-small900) {
-            @extend %footer-row;
-        }
+    @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+        @include footer-row;
     }
+
 
     & h4 {
         @include footer-h4($size, $dark-brown);
@@ -440,6 +467,8 @@ footer {
     }
 
     h4[lang=en] {
+        display: none;
+
         @media all and (min-width: $break-small701) and (max-width: $break-small900) {
             display: none;
         }
@@ -451,7 +480,17 @@ footer {
         }
     }
 
+    h4[lang=ar] {
+        display: none;
+
+        @media all and (min-width: $break-small701) and (max-width: $break-small900) {
+            display: block;
+        }
+    }
+
     h4[lang=ru] {
+        display: none;
+
         @media all and (min-width: $break-small701) and (max-width: $break-small900) {
             display: none;
         }

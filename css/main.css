@@ -85,12 +85,30 @@ header h1 i.fa-lg {
     line-height: 6.3968rem;
   }
 }
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  header h1 i.fa-lg {
+    color: #3a5E63;
+    display: inline;
+    float: none;
+    font-size: 4rem;
+    line-height: 6.3968rem;
+    vertical-align: baseline;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  header h1 i.fa-lg ~ span {
+    float: none;
+    letter-spacing: 0.25rem;
+    font-size: 3.998rem;
+    text-align: left;
+  }
+}
 
 header h1 span {
   font-size: 4rem;
   float: right;
-  color: #7C593C;
-  width: 80%;
+  color: #3a5E63;
+  width: 100%;
   padding-right: 0.5rem;
   text-align: right;
 }
@@ -109,13 +127,6 @@ header > nav {
   justify-content: flex-start;
   align-items: stretch;
   padding: 2rem 0;
-}
-@media all and (min-width: 701px) and (max-width: 900px) {
-  header > nav {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
 }
 
 header > nav a {
@@ -217,15 +228,21 @@ header {
     margin: 0 auto;
   }
 }
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  header {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
 
 header h1 {
   width: 100%;
   padding: 0 2rem;
 }
-@media all and (min-width: 701px) and (max-width: 900px) {
+@media all and (min-width: 901px) and (max-width: 1400px) {
   header h1 {
     width: 100%;
-    color: #7C593C;
+    color: #3a5E63;
   }
 }
 
@@ -237,6 +254,20 @@ header nav {
   justify-content: flex-start;
   align-items: stretch;
   padding: 2rem 0;
+}
+@media all and (min-width: 701px) and (max-width: 900px) {
+  header nav {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media all and (min-width: 901px) and (max-width: 1400px) {
+  header nav {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
 header nav > a {
@@ -384,7 +415,14 @@ footer .row {
   justify-content: space-around;
   align-items: flex-start;
 }
-
+@media all and (min-width: 701px) and (max-width: 900px) {
+  footer .row {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
 footer .row h4 {
   padding: 0.5rem 2rem;
   font-size: 1.414rem;
@@ -436,6 +474,9 @@ footerp {
     margin: 0 auto;
   }
 }
+footer h4[lang=en] {
+  display: none;
+}
 @media all and (min-width: 701px) and (max-width: 900px) {
   footer h4[lang=en] {
     display: none;
@@ -445,6 +486,17 @@ footerp {
   footer h4[lang=de] {
     display: none;
   }
+}
+footer h4[lang=ar] {
+  display: none;
+}
+@media all and (min-width: 701px) and (max-width: 900px) {
+  footer h4[lang=ar] {
+    display: block;
+  }
+}
+footer h4[lang=ru] {
+  display: none;
 }
 @media all and (min-width: 701px) and (max-width: 900px) {
   footer h4[lang=ru] {

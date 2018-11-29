@@ -110,3 +110,10 @@
     line-height: 1.2;
     padding: 2rem 2rem 1rem 2rem;
 }
+@mixin footer-row {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    @content;
+}
