@@ -442,9 +442,7 @@ section.content2 {
 
 .row {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+    @include headernav(column, flex-start, stretch);
 }
 
 .content2 .row {
