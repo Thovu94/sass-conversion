@@ -1,10 +1,6 @@
 @charset "UTF-8";
 /* default for whole page */
 /* serif for the headings */
-@mixins border-box-stuff {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
 * {
   padding: 0;
   margin: 0;
@@ -14,7 +10,8 @@
 
 *:after,
 *:before {
-  @mixins border-box-stuff;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
@@ -68,8 +65,8 @@ header h1 {
 }
 @media all and (min-width: 701px) and (max-width: 900px) {
   header h1 {
-    width: 100%;
     color: #7C593C;
+    width: 100%;
   }
 }
 
@@ -83,14 +80,14 @@ header h1 i.fa-lg {
 }
 @media all and (min-width: 701px) and (max-width: 900px) {
   header h1 i.fa-lg {
-    width: 100%;
     color: #7C593C;
-    vertical-align: baseline;
+    width: 100%;
     color: #7C593C;
     display: inline;
     float: none;
     font-size: 4rem;
     line-height: 6.3968rem;
+    vertical-align: baseline;
   }
 }
 @media all and (min-width: 901px) and (max-width: 1400px) {
@@ -105,27 +102,27 @@ header h1 i.fa-lg {
 }
 header h1 i.fa-lg ~ span {
   float: none;
-  width: 75%;
   font-size: 3.998rem;
-  padding-left: 1rem;
   text-align: right;
+  width: 75%;
+  padding-left: 1rem;
 }
 @media all and (min-width: 901px) and (max-width: 1400px) {
   header h1 i.fa-lg ~ span {
-    float: none;
     letter-spacing: 0.25rem;
+    float: none;
     font-size: 3.998rem;
     text-align: left;
   }
 }
 
 header h1 span {
-  font-size: 4rem;
   float: right;
-  color: #7C593C;
-  width: 100%;
-  padding-right: 0.5rem;
+  font-size: 4rem;
   text-align: right;
+  width: 100%;
+  color: #7C593C;
+  padding-right: 0.5rem;
 }
 @media all and (min-width: 701px) and (max-width: 900px) {
   header h1 span {
@@ -172,13 +169,13 @@ header > nav a {
 }
 @media all and (min-width: 701px) and (max-width: 900px) {
   header > nav a {
-    flex-basis: 20%;
     font-size: 1rem;
+    padding: 1rem;
     line-height: 2rem;
     min-height: 6rem;
+    flex-basis: 20%;
     border: none;
     border-left: 1px solid #d4d4d4;
-    padding: 1rem;
     background-color: #fff;
     flex-direction: row;
   }
@@ -199,13 +196,16 @@ header > nav a:hover {
   color: #7C593C;
 }
 
+.content1h3, .focal p {
+  padding: 0.2rem 2rem 2rem;
+}
+
 .focal h2 {
   font-size: 1.999rem;
   line-height: 1.2;
   padding: 2rem 2rem 1rem 2rem;
 }
 .focal p {
-  padding: 0.2rem 2rem 2rem;
   font-size: 1rem;
 }
 
@@ -214,7 +214,6 @@ header > nav a:hover {
 }
 .content1h3 {
   font-size: 1.999rem;
-  padding: 0.2rem 2rem 2rem;
 }
 @media all and (min-width: 901px) and (max-width: 1400px) {
   .content1 .row {
@@ -282,8 +281,8 @@ header h1 {
 }
 @media all and (min-width: 901px) and (max-width: 1400px) {
   header h1 {
-    width: 100%;
     color: #3a5E63;
+    width: 100%;
   }
 }
 
@@ -306,9 +305,9 @@ header nav {
 @media all and (min-width: 901px) and (max-width: 1400px) {
   header nav {
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -325,35 +324,34 @@ header nav > a {
 }
 @media all and (min-width: 701px) and (max-width: 900px) {
   header nav > a {
-    flex-basis: 20%;
     font-size: 1rem;
     line-height: 2rem;
-    min-height: 6rem;
     border: none;
-    border-left: 1px solid #d4d4d4;
     padding: 1rem;
     background-color: #fff;
+    flex-basis: 20%;
+    min-height: 6rem;
+    border-left: 1px solid #d4d4d4;
   }
 }
 @media all and (min-width: 901px) and (max-width: 1400px) {
   header nav > a {
-    flex-basis: 20%;
     font-size: 1rem;
     line-height: 2rem;
-    min-height: 2rem;
     border: none;
-    border-left: 1px solid #d4d4d4;
     padding: 0 1rem;
-    margin: 1rem 0;
     background-color: #fff;
-    padding: 0.5rem 0.5rem;
+    flex-basis: 20%;
+    min-height: 2rem;
+    border-left: 1px solid #d4d4d4;
+    margin: 1rem 0;
   }
 }
 
 section.focal {
   width: 400px;
-  /* default */
   margin: 0 auto;
+  /* default */
 }
 @media all and (min-width: 701px) and (max-width: 900px) {
   section.focal {

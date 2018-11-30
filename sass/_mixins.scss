@@ -1,6 +1,15 @@
-@mixins border-box-stuff {
+@mixin html {
+    font-size: 16px;
+    font-family: $main-font-family;
+    line-height: 1.6;
+    font-weight: 400;
+    @content;
+}
+
+@mixin border-box-stuff {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
+    @content;
 }
 
 @mixin font-stack($fam: Arial, $size: 1.414rem, $weight:600) {
@@ -77,6 +86,11 @@
     color: $colorh4;
 }
 
+@mixin header($color-header, $widthheader) {
+    color: $color-header;
+    width: $widthheader;
+}
+
 @mixin header700 {
     width: 700px;
     margin: 0 auto;
@@ -93,28 +107,92 @@
     @content;
 }
 
+@mixin header-h1-900 ($float-header-h1, $font-size-header-h1, $text-align-header-h1) {
+    float: $float-header-h1;
+    font-size: $font-size-media;
+    text-align: $text-align-header-h1;
+}
+
+@mixin header-h1-span {
+    float: none;
+    text-align: left;
+}
+
+@mixin headerspan($floatspan, $fontsizespan, $text-align, $widthspan) {
+    float: $floatspan;
+    font-size: $fontsizespan;
+    text-align: $text-align;
+    width: $widthspan;
+}
+
 @mixin headernav($flexdirection, $justifycontent, $align-items) {
     flex-direction: $flexdirection;
     justify-content: $justifycontent;
     align-items: $align-items;
     @content;
 }
-@mixin headernava($font-size-nav, $line-height-nav, $border-nav, $padding-nav,$background-color-nav){
+
+@mixin headernava($font-size-nav, $line-height-nav, $border-nav, $padding-nav, $background-color-nav) {
     font-size: $font-size-nav;
     line-height: $line-height-nav;
     border: $border-nav;
     padding: $padding-nav;
     background-color: $background-color-nav;
 }
-@mixin focalh2{
+
+@mixin header-nav-last-child($flex-basis-last, $min-height-last, $border-left) {
+    flex-basis: $flex-basis-last;
+    min-height: $min-height-last;
+    border-left: $border-left;
+    @content;
+}
+
+@mixin header-nav-media($font-nav, $padding, $line-height-nav, $min-height-nav) {
+
+    font-size: $font-nav;
+    padding: $padding;
+    line-height: $line-height-nav;
+    min-height: $min-height-nav;
+    @content;
+}
+
+@mixin header-media-control($width-media, $margin) {
+    width: $width-media;
+    margin: $margin;
+}
+
+@mixin content1-row($flex-direct, $flex-wrap, $justify, $align-items) {
+    flex-direction: $flex-direct;
+    flex-wrap: $flex-wrap;
+    justify-content: $justify;
+    align-items: $align-items;
+    @content;
+}
+
+@mixin bg-content($background-color, $color-bg, $font-weight-bg) {
+    background-color: $background-color;
+    color: $color-bg;
+    font-weight: $font-weight-bg;
+    @content;
+}
+
+@mixin focalh2 {
     font-size: $size-h2;
     line-height: 1.2;
     padding: 2rem 2rem 1rem 2rem;
 }
+
 @mixin footer-row {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+    @content;
+}
+
+//Others//
+@mixin width-margin($width1, $margin) {
+    width: $width1;
+    margin: $margin;
     @content;
 }
